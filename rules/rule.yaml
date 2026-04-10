@@ -1,0 +1,20 @@
+# 建议的规则集格式
+rule:
+  # 0. 内网IP段匹配直连（RFC1918，最大聚合 CIDR）
+  - IP-CIDR,10.0.0.0/8,直连
+  - IP-CIDR,172.16.0.0/12,直连
+  - IP-CIDR,192.168.0.0/16,直连
+
+  # 1. 社交与搜索（走代理）
+  - DOMAIN-SUFFIX,google.com,代理
+  - DOMAIN-SUFFIX,github.com,代理
+  - DOMAIN-KEYWORD,openai,代理
+  
+  # 2. 公司内部办公（走直连）
+  # 虽然你本地已经加了，但远程规则中也可以包含，作为兜底
+  - DOMAIN-SUFFIX,xx.com,直连
+  
+  # 3. 常见的国内服务（走直连）
+  - DOMAIN-SUFFIX,baidu.com,直连
+  - DOMAIN-SUFFIX,aliyun.com,直连
+  
