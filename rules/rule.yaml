@@ -17,4 +17,5 @@ rule:
   # 3. 常见的国内服务（走直连）
   - DOMAIN-SUFFIX,baidu.com,直连
   - DOMAIN-SUFFIX,aliyun.com,直连
+  - DOMAIN-SUFFIX,tencent.com,直连
   
