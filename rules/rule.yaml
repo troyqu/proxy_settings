@@ -12,7 +12,7 @@ rule:
   
   # 2. 公司内部办公（走直连）
   # 虽然你本地已经加了，但远程规则中也可以包含，作为兜底
-  - DOMAIN-SUFFIX,xx.com,直连
+  - DOMAIN-SUFFIX,anchnet.com,直连
   
   # 3. 常见的国内服务（走直连）
   - DOMAIN-SUFFIX,baidu.com,直连
